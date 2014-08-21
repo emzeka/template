@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dvizh</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"  />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+</head>
+<body>
+<div class="col-lg-12 header">
+    <div class="main-container">
+        <div class="row">
+            <div class="pull-left">
+                <a href="">In English</a>
+            </div>
+            <div class="pull-right">
+                <span class="phone">(044) 531-50-50</span>
+                <div class="town">
+                    <a role="button" data-toggle="dropdown" href="#">Київ <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="drop4">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Another action</a></li>
+                    </ul>
+                </div>
+                <a href="" class="ask-btn">задати питання</a>
+            </div>
+        </div>
+        <div class="row navbar">
+            <a href="" class="logo"></a>
+            <div class="navigation">
+                <ul>
+                    <li><a href="">Компанія</a></li>
+                    <li><a href="">Послуги</a></li>
+                    <li><a href="">Партнери</a></li>
+                    <li><a href="">Клієнти</a></li>
+                    <li><a href="">Контактна інформація</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12 content-box">
+    <div class="main-container contact">
+        <div class="aside col-lg-3">
+            <h2>Головний офіс</h2>
+            <ul>
+                <li><span>Киев,</span> ул. Прорезная, 10, оф.1</li>
+                <li>+38 (044) 531-50-50</li>
+                <li>+38 (050) 512-75-31</li>
+                <li><a href="mailto:lawyer-kiev@zaitsev.ua">lawyer-kiev@zaitsev.ua</a></li>
+            </ul>
+            <h2>Філії</h2>
+            <ul>
+                <li><span>Харків,</span>  пр. Постишева, 53</li>
+                <li>+38 (057) 370-50-51</li>
+                <li>+38 (067) 312-75-31</li>
+                <li><a href="mailto:lawyer-kharkiv@zaitsev.ua">lawyer-kharkiv@zaitsev.ua</a></li>
+            </ul>
+            <ul>
+                <li><span>Харків,</span>  вул. Світло шахтаря, 4/6</li>
+                <li>+38 (057) 733-20-37</li>
+                <li>+38 (050) 323-63-75</li>
+                <li><a href="mailto:lawyer-kharkiv@zaitsev.ua">lawyer-kharkiv@zaitsev.ua</a></li>
+            </ul>
+            <ul>
+                <li><span>Запоріжжя,</span>  вул. Тюленіна, 7/1</li>
+                <li>+38 (067) 312-75-31</li>
+                <li><a href="mailto:lawyer-zaporizhzhia@zaitsev.ua">lawyer-zaporizhzhia@zaitsev.ua</a></li>
+            </ul>
+            <ul>
+                <li><span>Одеса,</span>  пр. Шевченка, 4-А</li>
+                <li>+38 (050) 512-75-31</li>
+                <li>+38 (067) 312-75-31</li>
+                <li><a href="mailto:lawyer-odessa@zaitsev.ua">lawyer-odessa@zaitsev.ua</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-9 map-box">
+            <script src="http://maps.googleapis.com/maps/api/js?sensor=true" type="text/javascript"></script>
+            <div id="map_canvas" style="width: 705px; height: 530px;">&nbsp;</div>
+            <script type="text/javascript">
+                // <![CDATA[
+                var myLatlng = new google.maps.LatLng(50.448413, 30.519119);
+                var mapOptions = {
+                    zoom: 18,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: "Zaicev"
+                });
+                // ]]>
+
+            </script>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12 footer">
+    <div class="main-container">
+        <div class="pull-left">
+            <p>© 1995–2013 Зайцев та партнери</p>
+        </div>
+        <div class="pull-right">
+            <ul>
+                <li><a href="" class="fb"></a></li>
+                <li><a href="" class="yt"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

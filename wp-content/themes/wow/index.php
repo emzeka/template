@@ -1,23 +1,30 @@
 ﻿<?php get_header(); ?>
-        <div class="main-container">
-            <?php echo get_template_part( 'carousel', 'template' ); ?>
-        </div>
-    </div>
 
-    <div class="col-lg-12 news-container">
-        <div class="main-container">
-            <?php echo get_template_part( 'news', 'template' ); ?>
-        </div>
-    </div>
+    <div class="col-md-8 content">
+        <?php if (have_posts()) : ?>
+            <?php while ( have_posts() ) : the_post(); ?>
 
-    <div class="col-lg-12 client-box">
-        <div class="main-container">
-            <span class="h3">Клієнти</span>
-            <div class="row">
-                <?php
-                    $page = get_page(13);
-                    echo apply_filters('the_content', $page->post_content);
-                ?>
-            </div>
-        </div>
+                <h2 class="h2-title">Последние гайды</h2>
+
+                <div class="col-md-12 item">
+                    <div class="thumb">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
+                    <div class="article">
+                        <div class="helped-line">
+                            <?php the_date(); ?> • 28 комментариев
+                        </div>
+                        <h3><a href="<?php the_permalink(); ?>" class="h3"><?php the_title(); ?></a></h3>
+                        <div class="description">
+                            <?php do_excerpt(get_the_excerpt(), 225); ?>
+                        </div>
+                        <a href="<?php the_permalink(); ?>" class="read-more">Читать полностью</a>
+                    </div>
+                </div>
+
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
+<?php wp_reset_query(); ?>
+
 <?php get_footer(); ?>
